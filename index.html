@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>大佬请批阅</title>
+    <title>猛男请批阅</title>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <style>
         :root {
@@ -721,7 +721,7 @@
 </head>
 
 <body>
-    <button class="theme-toggle">大佬请护目 🌞</button>
+    <button class="theme-toggle">猛男请护目 🌞</button>
     <button class="exit-button">退朝</button>
     <div id="image-container"></div>
 
@@ -1423,12 +1423,12 @@
 
             // 获取已经存在的主题切换按钮
             const themeToggle = document.querySelector('.theme-toggle');
-            themeToggle.textContent = savedTheme === 'dark' ? '大佬请明目 🌙' : '大佬请护目 🌞';
+            themeToggle.textContent = savedTheme === 'dark' ? '猛男请明目 🌙' : '猛男请护目 🌞';
             themeToggle.addEventListener('click', () => {
                 const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
                 document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
                 document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-                themeToggle.textContent = isDark ? '大佬请护目 🌞' : '大佬请明目 🌙';
+                themeToggle.textContent = isDark ? '猛男请护目 🌞' : '猛男请明目 🌙';
                 localStorage.setItem('theme', isDark ? 'light' : 'dark');
             });
 
