@@ -831,8 +831,15 @@
         }
 
         @keyframes fadeInOut {
-            0%, 100% { opacity: 0.6; }
-            50% { opacity: 1; }
+
+            0%,
+            100% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -995,11 +1002,11 @@
         function showStatsDialog() {
             document.getElementById('likes-count').textContent = likeCount;
             document.getElementById('dislikes-count').textContent = dislikeCount;
-            
+
             // 随机选择一条心情文案
             const randomMood = moodTexts[Math.floor(Math.random() * moodTexts.length)];
             document.getElementById('mood-text').textContent = randomMood;
-            
+
             document.getElementById('overlay').style.display = 'block';
             document.getElementById('stats-dialog').style.display = 'block';
         }
@@ -1053,9 +1060,9 @@
                     };
                     xhr.send();
                 });
-                
+
                 images = imageFiles;
-                
+
                 // 预加载第一张图片
                 await new Promise((resolve) => {
                     const img = new Image();
@@ -1108,7 +1115,7 @@
         // 处理鼠标事件（PC端）
         let isMouseDown = false;
         let mouseStartX = 0;
-        
+
         imageContainer.addEventListener('mousedown', (e) => {
             isMouseDown = true;
             mouseStartX = e.clientX;
@@ -1118,7 +1125,7 @@
             if (isMouseDown) {
                 const mouseEndX = e.clientX;
                 const diff = mouseStartX - mouseEndX;
-                
+
                 if (Math.abs(diff) > 50) {
                     if (diff > 0) {
                         // 左滑
